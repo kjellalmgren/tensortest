@@ -3,7 +3,7 @@ from tensorflow import keras
 import datetime
 
 print(tf.version.VERSION) 
-print("Kjell Osse Almgren testar python 3 på Nvidia/xavier")
+print("Kjell Osse Almgren testar python 3 på System76/osse")
 
 #fashion_mnist = keras.datasets.fashion_mnist
 
