@@ -2,12 +2,12 @@ import tensorflow as tf
 from tensorflow import keras
 import datetime
 
-print(tf.version.VERSION) 
+# print(tf.version.VERSION) 
 print("Kjell Osse Almgren testar python 3 på System76/osse")
 
 #fashion_mnist = keras.datasets.fashion_mnist
 
-print("Tensorflow version: ".format(tf.version.VERSION))
+print("Tensorflow version: ",tf.version.VERSION)
 tf.debugging.set_log_device_placement(True)
 # tf.enable_eager_execution()
 tf.executing_eagerly()
@@ -19,7 +19,7 @@ with tf.device("/device:cpu:0"):
    #
    start_cpu = datetime.datetime.now()
    print("Entering CPU")
-   print(tf.reduce_sum(tf.random.normal([20000, 20000])))
+   print(tf.reduce_sum(tf.random.normal([22000, 22000])))
    end_cpu = datetime.datetime.now()
    total_cpu_time = end_cpu - start_cpu
 # 
@@ -27,7 +27,7 @@ with tf.device("/device:gpu:0"):
    #
    start_gpu = datetime.datetime.now()
    print("Entering GPU")
-   print(tf.reduce_sum(tf.random.normal([20000, 20000])))
+   print(tf.reduce_sum(tf.random.normal([22000, 22000])))
    end_gpu = datetime.datetime.now()
    total_gpu_time = end_gpu - start_gpu
 #
